@@ -1,6 +1,16 @@
 def jogo_forca():
     print("Olá, usuário(a). Bem vindo ao jogo da forca! Você possui 10 tentativas! ")
 
+    arquivo = open("palavras.txt", "r")
+    palavra =[]
+
+    for linha in arquivo:
+        linha = linha.strip()
+        palavra.append(linha)
+        print(palavra)
+
+    arquivo.close()
+
     palavra_secreta = "vini".upper()
     lista_tarja = ["_" for letra in palavra_secreta]
 
