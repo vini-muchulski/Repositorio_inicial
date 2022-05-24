@@ -1,5 +1,9 @@
+import random
 def jogo_forca():
-    print("Olá, usuário(a). Bem vindo ao jogo da forca! Você possui 10 tentativas! ")
+
+
+
+    print("Olá, usuário(a). Bem vindo ao jogo da forca! " )
 
     arquivo = open("palavras.txt", "r")
     palavra =[]
@@ -7,29 +11,30 @@ def jogo_forca():
     for linha in arquivo:
         linha = linha.strip()
         palavra.append(linha)
-        print(palavra)
+
 
     arquivo.close()
 
-    palavra_secreta = "vini".upper()
+    numero = random.randrange(0,len(palavra))
+
+    palavra_secreta = palavra[numero].upper()
+
     lista_tarja = ["_" for letra in palavra_secreta]
 
     enforcou = False
     acertou = False
-    tentativas = 10
-
+    tentativas = 5
 
     while (not acertou and not enforcou):
-        chute = input("Digite uma letra: {} : " .format(lista_tarja))
+        chute = input("Digite uma letra: {} : ".format(lista_tarja))
         chute = chute.strip().upper()
 
-
-        if(chute in palavra_secreta):
+        if (chute in palavra_secreta):
             posicao = 0
             for letra in palavra_secreta:
                 if letra.upper() == chute.upper():
                     lista_tarja[posicao] = letra
-                posicao = posicao +1
+                posicao = posicao + 1
             print("Ainda possui {} tentativas".format(tentativas))
         else:
 
@@ -42,7 +47,7 @@ def jogo_forca():
             print("Parabéns! Você conseguiu! A palavra era {}".format(palavra_secreta))
 
         if(tentativas == 0):
-            print("Você não conseguiu acertar e ficou sem tentativas")
+            print("Você não conseguiu acertar e ficou sem tentativas! A palavra era {}".format(palavra_secreta))
             break
 
 
