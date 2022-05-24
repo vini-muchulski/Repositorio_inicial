@@ -1,37 +1,25 @@
 import random
-
-def inicializacao():
-
-    print("Olá, usuário(a). Bem vindo ao jogo da forca! ")
+def jogo_forca():
 
 
-def palavra():
+
+    print("Olá, usuário(a). Bem vindo ao jogo da forca! " )
+
     arquivo = open("palavras.txt", "r")
-    palavra = []
+    palavra =[]
 
     for linha in arquivo:
         linha = linha.strip()
         palavra.append(linha)
+
 
     arquivo.close()
 
     numero = random.randrange(0, len(palavra))
 
     palavra_secreta = palavra[numero].upper()
-    return palavra_secreta
 
-def lista_letras_acertadas():
-    palavra_secreta = palavra()
-    return ["_" for letra in palavra_secreta]
-
-
-def jogo_forca():
-
-    inicializacao()
-
-    palavra_secreta = palavra()
-
-    lista_tarja = lista_letras_acertadas()
+    lista_tarja = ["_" for letra in palavra_secreta]
 
     enforcou = False
     acertou = False
@@ -53,8 +41,6 @@ def jogo_forca():
             tentativas = tentativas - 1
             print("Restam ainda {} tentativas".format(tentativas))
 
-        print("Carregando...")
-
         if "_" not in lista_tarja:
             enforcou = True
             acertou = True
@@ -65,6 +51,7 @@ def jogo_forca():
             break
 
 
+        print("Carregando...")
 
 
     print("Fim de jogo")
