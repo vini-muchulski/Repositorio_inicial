@@ -12,7 +12,6 @@ def jogo_forca():
         linha = linha.strip()
         palavra.append(linha)
 
-
     arquivo.close()
 
     numero = random.randrange(0, len(palavra))

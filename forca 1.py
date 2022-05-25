@@ -58,14 +58,23 @@ def jogo_forca():
         if "_" not in lista_tarja:
             enforcou = True
             acertou = True
-            print("Parabéns! Você conseguiu! A palavra era {}".format(palavra_secreta))
+            print("Parabéns! :) Você conseguiu! A palavra era {}.".format(palavra_secreta))
+
+            print("Parabéns, você ganhou!")
+            print("       ___________      ")
+            print("      '._==_==_=_.'     ")
+            print("      .-\:      /-.    ")
+            print("     | (|:.     |) |    ")
+            print("      '-|:.     |-'     ")
+            print("        \::.    /      ")
+            print("         '::. .'        ")
+            print("           ) (          ")
+            print("         _.' '._        ")
+            print("        '-------'       ")
 
         if(tentativas == 0):
-            print("Você não conseguiu acertar e ficou sem tentativas! A palavra era {}".format(palavra_secreta))
+            print("Você não conseguiu acertar e ficou sem tentativas! *_* A palavra era {}.".format(palavra_secreta))
             break
-
-
-
 
     print("Fim de jogo")
 
