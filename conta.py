@@ -10,9 +10,14 @@ class ContaCorrente:
         def extrato(self):
             print("O saldo de {} é R${}.".format(self.__nome, self.__saldo))
 
-        def deposita(self, valor,):
+        def depositar(self, valor,):
             self.__saldo = self.__saldo + valor
 
-        def saca(self, valor,):
+        def sacar(self, valor,):
             self.__saldo = self.__saldo - valor
+
+        def transferir(self,valor, destino):
+            self.sacar(valor)
+            destino.depositar(valor)
+
 
