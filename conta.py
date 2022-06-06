@@ -14,7 +14,11 @@ class ContaCorrente:
             self.__saldo = self.__saldo + valor
 
         def sacar(self, valor,):
-            self.__saldo = self.__saldo - valor
+            if(valor>=(self.__saldo + self.__limite)):
+                print(("Você não possui saldo suficiente! "))
+
+            else:
+             self.__saldo = self.__saldo - valor
 
         def transferir(self,valor, destino):
             self.sacar(valor)
