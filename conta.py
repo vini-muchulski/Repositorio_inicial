@@ -24,16 +24,25 @@ class ContaCorrente:
             self.sacar(valor)
             destino.depositar(valor)
 
+        @property
         def get_saldo(self):
             return self.__saldo
 
+        @property
         def get_nome(self):
             return self.__nome
 
+        @property
         def get_limite(self):
             return self.__limite
 
         def set_limit(self,limite):
             self.__limite = limite
+
+        @staticmethod
+        def banco():
+            return {'BB': '001', 'Caixa': '104', 'Bradesco':'237'}
+
+
 
 
