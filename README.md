@@ -1,2 +1,2 @@
 # PyProjetos
-Pasta de projetos e exercicios realizados durante os cursos feitos! 
+Pasta de projetos e exercicios realizados em Python! 
