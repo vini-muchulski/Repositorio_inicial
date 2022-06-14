@@ -24,11 +24,19 @@ class Filme(Programa):
         super().__init__(nome,ano)
         self.duracao = duracao
 
+class Documentario(Programa):
+    def __init__(self, nome, ano, temporadas):
+        super().__init__(nome,ano)
+        self.temporadas = temporadas
+        self._likes = 0
+
 class Serie(Programa):
     def __init__(self,nome ,ano ,temporadas):
         super().__init__(nome,ano)
         self._likes = 0
         self.temporadas = temporadas
+
+
 
 
 
@@ -48,3 +56,10 @@ topgun2.curtida()
 
 
 print("Nome: {} - Ano: {} - Duração: {} Min - Curtidas {}".format(topgun2.nome,topgun2.ano, topgun2.duracao,topgun2.likes))
+
+
+doc = Documentario("One Strange Rock", 2018, 2)
+
+doc.curtida()
+
+print("Nome: {} - Ano: {} - Temporadas: Curtidas {}".format(doc.nome,doc.ano, doc.temporadas,doc.curtida()))
