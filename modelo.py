@@ -21,15 +21,12 @@ class Programa:
 
 class Filme(Programa):
     def __init__(self, nome, ano, duracao):
-        
+        super().__init__(nome,ano)
         self.duracao = duracao
-
-
 
 class Serie(Programa):
     def __init__(self,nome ,ano ,temporadas):
-        self._nome = nome.title()
-        self.ano = ano
+        super().__init__(nome,ano)
         self._likes = 0
         self.temporadas = temporadas
 
