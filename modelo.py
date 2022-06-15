@@ -27,41 +27,38 @@ class Filme(Programa):
         super().__init__(nome,ano)
         self.duracao = duracao
 
+    def imprime(self):
+        print("Nome: {} - Ano: {} - Duração: {} min - Curtidas {} ".format(self._nome, self.ano,self.duracao, self.likes))
+
 class Documentario(Programa):
     def __init__(self, nome, ano, temporadas):
         super().__init__(nome,ano)
         self.temporadas = temporadas
 
+    def imprime(self):
+        print("Nome: {} - Ano: {} - Temporadas: {} - Curtidas {} ".format(self._nome, self.ano, self.temporadas, self.likes))
 
 class Serie(Programa):
     def __init__(self,nome ,ano ,temporadas):
         super().__init__(nome,ano)
         self.temporadas = temporadas
 
+    def imprime(self):
+        print("Nome: {} - Ano: {} - Temporadas: {} - Curtidas {} ".format(self._nome, self.ano, self.temporadas, self.likes))
 
 twd = Serie("the walking dead", 2010,11,)
 
 twd.curtida()
 twd.curtida()
-twd.curtida()
-twd.curtida()
 
-print("Nome: {} - Ano: {} - Temporadas: {} - Curtidas {}".format(twd.nome,twd.ano, twd.temporadas,twd.likes))
 
-topgun2 = Filme("top gun: maverick", 2022, 137, )
+topgun2 = Filme("top gun: maverick", 2022, 137)
 topgun2.curtida()
-topgun2.curtida()
-topgun2.curtida()
-
-
-print("Nome: {} - Ano: {} - Duração: {} Min - Curtidas {}".format(topgun2.nome,topgun2.ano, topgun2.duracao,topgun2.likes))
 
 
 doc = Documentario("One Strange Rock", 2018, 2)
-
 doc.curtida()
 
-print("Nome: {} - Ano: {} - Temporadas: {} - Curtidas {}".format(doc.nome,doc.ano, doc.temporadas,doc.likes))
 
 print("--------------------------------")
 
