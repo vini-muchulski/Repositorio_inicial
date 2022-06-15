@@ -62,4 +62,4 @@ doc = Documentario("One Strange Rock", 2018, 2)
 
 doc.curtida()
 
-print("Nome: {} - Ano: {} - Temporadas: Curtidas {}".format(doc.nome,doc.ano, doc.temporadas,doc.curtida()))
+print("Nome: {} - Ano: {} - Temporadas:{} - Curtidas {}".format(doc.nome,doc.ano, doc.temporadas,doc.likes))
