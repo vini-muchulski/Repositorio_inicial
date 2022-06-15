@@ -19,6 +19,9 @@ class Programa:
         def nome(self, novo_nome):
             self._nome = novo_nome.title()
 
+        def imprime(self):
+            print("Nome: {} - Ano: {} - Curtidas {}".format(self._nome,self.ano,self.likes))
+
 class Filme(Programa):
     def __init__(self, nome, ano, duracao):
         super().__init__(nome,ano)
@@ -34,10 +37,6 @@ class Serie(Programa):
     def __init__(self,nome ,ano ,temporadas):
         super().__init__(nome,ano)
         self.temporadas = temporadas
-
-
-
-
 
 
 twd = Serie("the walking dead", 2010,11,)
@@ -62,10 +61,11 @@ doc = Documentario("One Strange Rock", 2018, 2)
 
 doc.curtida()
 
-print("Nome: {} - Ano: {} - Temporadas:{} - Curtidas {}".format(doc.nome,doc.ano, doc.temporadas,doc.likes))
+print("Nome: {} - Ano: {} - Temporadas: {} - Curtidas {}".format(doc.nome,doc.ano, doc.temporadas,doc.likes))
+
+print("--------------------------------")
 
 filmes_series = [topgun2,twd,doc]
 
 for programa in filmes_series:
-    detalhes = programa.duracao if hasattr(programa,"duracao") else programa.temporadas
-    print("{} - {} - {} - {}".format(programa.nome, programa.ano, programa.likes, detalhes))
+    programa.imprime()
