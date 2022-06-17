@@ -46,6 +46,14 @@ class Serie(Programa):
     def imprime(self):
         print("Nome: {} - Ano: {} - Temporadas: {} - Curtidas {} ".format(self._nome, self.ano, self.temporadas, self.likes))
 
+class playlist:
+    def __init__(self,nome,programas):
+        self.nome = nome
+        self.programas = programas
+
+    def tamanho(self):
+        return len(self.programas)
+
 twd = Serie("the walking dead", 2010,11,)
 
 twd.curtida()
