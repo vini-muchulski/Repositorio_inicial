@@ -63,12 +63,12 @@ FaM.curtida()
 twd.curtida()
 twd.curtida()
 
-print("--------------------------------")
-
 filmes_series = [topgun2,doc,FaM,twd,]
 playlist_folga = playlist("Fim de semana", filmes_series)
 
-print("Tamanho da playlist: {}")
+print ("Tamanho da playlist: {} programas".format(len(playlist_folga)))
+
+print("--------------------------------")
 
 for programa in playlist_folga:
     programa.imprime()
