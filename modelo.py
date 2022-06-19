@@ -20,7 +20,7 @@ class Programa:
             self._nome = novo_nome.title()
 
         def imprime(self):
-            print("Nome: {} - Ano: {} - Curtidas {}".format(self._nome,self.ano,self.likes))
+            print("Nome: {} - Ano: {} - Curtidas {}".format(self._nome ,self.ano ,self.likes))
 
 class Filme(Programa):
     def __init__(self, nome, ano, duracao):
@@ -28,7 +28,7 @@ class Filme(Programa):
         self.duracao = duracao
 
     def imprime(self):
-        print("Nome: {} - Ano: {} - Duração: {} min - Curtidas {} ".format(self._nome, self.ano,self.duracao, self.likes))
+        print("Nome: {} - Ano: {} - Duração: {} min - Curtidas {} ".format(self._nome, self.ano, self.duracao, self.likes))
 
 class Documentario(Programa):
     def __init__(self, nome, ano, temporadas):
