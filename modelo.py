@@ -46,15 +46,19 @@ class Serie(Programa):
     def imprime(self):
         print("Nome: {} - Ano: {} - Temporadas: {} - Curtidas {} ".format(self._nome, self.ano, self.temporadas, self.likes))
 
-class playlist(list):
+class playlist:
     def __init__(self,nome,programas):
         self.nome = nome
-        self.programas = programas
-        super().__init__(programas)
+        self.__programas = programas
 
-        x = list
+    @property
+    def listagem(self):
+        return self.__programas
 
-        print(x)
+    @property
+    def tamanho(self):
+        return len(self.__programas)
+
 
 twd = Serie("the walking dead", 2010,11,)
 topgun2 = Filme("top gun: maverick", 2022, 137)
@@ -70,9 +74,9 @@ twd.curtida()
 filmes_series = [topgun2, doc, FaM, twd]
 playlist_folga = playlist("Fim de semana", filmes_series)
 
-print ("Tamanho da playlist: {} programas".format(len(playlist_folga)))
+print ("Tamanho da playlist: {} programas".format(len(playlist_folga.listagem)))
 
 print("--------------------------------")
 
-for programa in playlist_folga:
+for programa in playlist_folga.listagem:
     programa.imprime()
