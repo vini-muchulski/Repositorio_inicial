@@ -59,6 +59,9 @@ class playlist:
     def tamanho(self):
         return len(self.__programas)
 
+    def __getitem__(self, item):
+        return self.__programas[item]
+
 
 twd = Serie("the walking dead", 2010,11,)
 topgun2 = Filme("top gun: maverick", 2022, 137)
@@ -72,11 +75,13 @@ twd.curtida()
 twd.curtida()
 
 filmes_series = [topgun2, doc, FaM, twd]
-playlist_folga = playlist("Fim de semana", filmes_series)
+playlist_folga = (playlist("Fim de semana", filmes_series).listagem)
 
-print ("Tamanho da playlist: {} programas".format(len(playlist_folga.listagem)))
+print ("Tamanho da playlist: {} programas".format(len(playlist_folga)))
 
 print("--------------------------------")
 
-for programa in playlist_folga.listagem:
+print(topgun2 in playlist_folga)
+
+for programa in playlist_folga:
     programa.imprime()
