@@ -52,6 +52,10 @@ class playlist(list):
         self.programas = programas
         super().__init__(programas)
 
+        x = list
+
+        print(x)
+
 twd = Serie("the walking dead", 2010,11,)
 topgun2 = Filme("top gun: maverick", 2022, 137)
 doc = Documentario("One Strange Rock", 2018, 2)
@@ -63,7 +67,7 @@ FaM.curtida()
 twd.curtida()
 twd.curtida()
 
-filmes_series = [topgun2,doc,FaM,twd,]
+filmes_series = [topgun2, doc, FaM, twd]
 playlist_folga = playlist("Fim de semana", filmes_series)
 
 print ("Tamanho da playlist: {} programas".format(len(playlist_folga)))
