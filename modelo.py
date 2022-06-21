@@ -56,7 +56,7 @@ class playlist:
         return self.__programas
 
     @property
-    def tamanho(self):
+    def __len__(self):
         return len(self.__programas)
 
     def __getitem__(self, item):
